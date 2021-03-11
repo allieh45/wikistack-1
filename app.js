@@ -12,7 +12,7 @@ app.use("/wiki", wikiRouter);
 app.use("/users", userRouter);
 
 app.get("/", (req, res, next) => {
-  res.send("Hello World");
+  res.redirect("/wiki");
 });
 
 db.authenticate().then(() => {
